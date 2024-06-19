@@ -138,9 +138,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     }//GEN-LAST:event_generoDoramaActionPerformed
 
     private void adicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_adicionarActionPerformed
 
     /**

@@ -80,9 +80,7 @@ public class telaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_entrarActionPerformed
 
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed

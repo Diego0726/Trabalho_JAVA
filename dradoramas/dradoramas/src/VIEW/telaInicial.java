@@ -64,7 +64,9 @@ public class telaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void COMECARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_COMECARActionPerformed
-           
+            telaCadastro TelaCadastro = new telaCadastro();
+                TelaCadastro.setVisible(true);
+                dispose();
     }//GEN-LAST:event_COMECARActionPerformed
 
     /**

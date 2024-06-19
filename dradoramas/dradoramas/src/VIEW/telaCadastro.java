@@ -121,9 +121,7 @@ public class telaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_idadeActionPerformed
 
     private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_prosseguirActionPerformed
 
     /**

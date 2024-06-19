@@ -85,9 +85,7 @@ public class telaConfigurações extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarConfiguActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarConfiguActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_voltarConfiguActionPerformed
 
     /**

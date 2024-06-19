@@ -122,9 +122,7 @@ public class telaLista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_voltarActionPerformed
 
     private void verListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verListaActionPerformed

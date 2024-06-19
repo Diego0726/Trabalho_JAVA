@@ -106,9 +106,7 @@ public class telaDorama extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarLista2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarLista2ActionPerformed
-        telaCadastro TelaCadastro = new telaCadastro();
-        TelaCadastro.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_voltarLista2ActionPerformed
 
     /**
