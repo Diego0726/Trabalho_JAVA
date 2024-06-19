@@ -10,10 +10,6 @@ public class UsuarioDTO {
     private String Email;
     private String Senha;
 
-    
-    
-    
-    
     public int getID() {
         return ID;
     }
@@ -66,7 +62,7 @@ public class UsuarioDTO {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 43 * hash + this.ID;
+        hash = 43 * hash + this.getID();
         return hash;
     }
 
@@ -82,6 +78,6 @@ public class UsuarioDTO {
             return false;
         }
         final UsuarioDTO other = (UsuarioDTO) obj;
-        return this.ID == other.ID;
+        return this.getID() == other.getID();
     }
 }
