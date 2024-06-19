@@ -4,6 +4,13 @@
  */
 package VIEW;
 
+import DAO.UsuarioDAO;
+import DTO.UsuarioDTO;
+import VIEW.telaAbertura;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Pichau
@@ -80,7 +87,32 @@ public class telaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarActionPerformed
-       
+       try {
+           String email, senha;
+           
+           email = txtemail.getText();
+           senha = txtsenha.getText();
+           
+           UsuarioDTO objusuariodto = new UsuarioDTO();
+            objusuariodto.setemail(email);
+            objusuariodto.setsenha(senha);
+           
+            UsuarioDAO objusariodao = new UsuarioDAO();
+            ResultSet rsusariodao = objusariodao.autenticacaoUsuario(objusuariodto);
+            
+            if(rsusariodao.next()){
+                telaAbertura objtelaAbertura = new telaAbertura();
+                objtelaAbertura.setVisible(true);
+                dispose();
+                
+            }else{
+                JOptionPane.showMessageDialog(null,"Usuário ou Senha Inválida!");
+            }
+            } catch (SQLException erro) {
+               JOptionPane.showMessageDialog(null, "telaLogin" + erro);
+            }
+           
+       }
     }//GEN-LAST:event_entrarActionPerformed
 
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
