@@ -95,7 +95,7 @@ public class telaCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(prosseguir);
-        prosseguir.setBounds(160, 850, 120, 30);
+        prosseguir.setBounds(160, 840, 120, 30);
 
         CADASTRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/2.png"))); // NOI18N
         getContentPane().add(CADASTRO);

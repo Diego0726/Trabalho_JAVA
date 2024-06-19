@@ -4,22 +4,17 @@
  */
 package VIEW;
 
-
 /**
  *
  * @author Pichau
  */
-
-public class telaInicial extends javax.swing.JFrame {
+public class telaIncial extends javax.swing.JFrame {
 
     /**
-     * Creates new form telaCadastro
+     * Creates new form telaIncial1
      */
-    
-    
-    public telaInicial() {
+    public telaIncial() {
         initComponents();
-        
     }
 
     /**
@@ -31,43 +26,37 @@ public class telaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        COMECAR = new javax.swing.JButton();
-        INICIO = new javax.swing.JLabel();
+        btncomeca = new javax.swing.JButton();
+        inicial = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setEnabled(false);
-        setFocusCycleRoot(false);
-        setFocusable(false);
-        setFocusableWindowState(false);
-        setMinimumSize(new java.awt.Dimension(430, 932));
         getContentPane().setLayout(null);
 
-        COMECAR.setBackground(new java.awt.Color(252, 18, 76));
-        COMECAR.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        COMECAR.setForeground(new java.awt.Color(255, 255, 255));
-        COMECAR.setText("COMEÇAR");
-        COMECAR.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        COMECAR.addActionListener(new java.awt.event.ActionListener() {
+        btncomeca.setBackground(new java.awt.Color(252, 18, 76));
+        btncomeca.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        btncomeca.setForeground(new java.awt.Color(255, 255, 255));
+        btncomeca.setText("COMEÇAR");
+        btncomeca.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btncomeca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                COMECARActionPerformed(evt);
+                btncomecaActionPerformed(evt);
             }
         });
-        getContentPane().add(COMECAR);
-        COMECAR.setBounds(170, 830, 90, 30);
+        getContentPane().add(btncomeca);
+        btncomeca.setBounds(170, 840, 71, 22);
 
-        INICIO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/1.png"))); // NOI18N
-        getContentPane().add(INICIO);
-        INICIO.setBounds(0, 0, 430, 932);
+        inicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/1.png"))); // NOI18N
+        getContentPane().add(inicial);
+        inicial.setBounds(-3, -4, 440, 940);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void COMECARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_COMECARActionPerformed
-            telaCadastro TelaCadastro = new telaCadastro();
-                TelaCadastro.setVisible(true);
-                this.dispose();
-    }//GEN-LAST:event_COMECARActionPerformed
+    private void btncomecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomecaActionPerformed
+        telaCadastro objTelaCadastro = new telaCadastro();
+            objTelaCadastro.setVisible(true);
+            dispose();
+    }//GEN-LAST:event_btncomecaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,13 +75,13 @@ public class telaInicial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -100,13 +89,13 @@ public class telaInicial extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new telaInicial().setVisible(true);
+                new telaIncial().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton COMECAR;
-    private javax.swing.JLabel INICIO;
+    private javax.swing.JButton btncomeca;
+    private javax.swing.JLabel inicial;
     // End of variables declaration//GEN-END:variables
 }
