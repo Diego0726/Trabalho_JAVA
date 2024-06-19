@@ -4,10 +4,9 @@
  */
 package VIEW;
 
-/**
- *
- * @author Pichau
- */
+import DAO.UsuarioDAO;
+import DTO.UsuarioDTO;
+
 public class telaCadastro extends javax.swing.JFrame {
 
     /**
@@ -121,7 +120,25 @@ public class telaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_idadeActionPerformed
 
     private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
+        String nome, genero, email, senha;
+        Int idade;
         
+        nome = txtnome.getText();
+        idade = txtidade.getText();
+        genero = txtgenero.getText();
+        email = txtemail.getText();
+        senha = txtsenha.getText();
+        
+         UsuarioDTO objusuariodto = new UsuarioDTO();
+            objusuariodto.setnome(nome);
+            objusuariodto.setidade(idade);
+            
+        UsuarioDAO objusuariodao = new UsuarioDAO();
+        objusuariodao.cadastrarUsuario(objusuariodto);
+        
+        pucca_Login objpucca_Login = new pucca_Login();
+                objpucca_Login.setVisible(true);
+                dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
 
     /**

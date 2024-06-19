@@ -3,12 +3,12 @@ package DTO;
 public class DoramaDTO {
 
     private int ID;
-    private String Plataforma;
-    private String Nome;
-    private String Genero;
-    private int Temp;
-    private int Eps;
-    private String Observacao;
+    private String plataforma;
+    private String nome;
+    private String genero;
+    private int temp;
+    private int eps;
+    private String observacao;
 
     
     //GET
@@ -16,28 +16,28 @@ public class DoramaDTO {
         return ID;
     }
 
-    public String getPlataforma() {
-        return Plataforma;
+    public String getplataforma() {
+        return plataforma;
     }
 
-    public String getNome() {
-        return Nome;
+    public String getnome() {
+        return nome;
     }
 
-    public String getGenero() {
-        return Genero;
+    public String getgenero() {
+        return genero;
     }
 
-    public int getTemp() {
-        return Temp;
+    public int gettemp() {
+        return temp;
     }
 
-    public int getEps() {
-        return Eps;
+    public int geteps() {
+        return eps;
     }
 
-    public String getObservacao() {
-        return Observacao;
+    public String getobservacao() {
+        return observacao;
     }
 
     
@@ -46,28 +46,28 @@ public class DoramaDTO {
         this.ID = ID;
     }
 
-    public void setPlataforma(String Plataforma) {
-        this.Plataforma = Plataforma;
+    public void setplataforma(String Plataforma) {
+        this.plataforma = plataforma;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setnome(String nome) {
+        this.nome = nome;
     }
 
-    public void setGenero(String Genero) {
-        this.Genero = Genero;
+    public void setgenero(String genero) {
+        this.genero = genero;
     }
 
-    public void setTemp(int Temp) {
-        this.Temp = Temp;
+    public void settemp(int temp) {
+        this.temp = temp;
     }
 
-    public void setEps(int Eps) {
-        this.Eps = Eps;
+    public void seteps(int Eps) {
+        this.eps = eps;
     }
 
-    public void setObservacao(String Observacao) {
-        this.Observacao = Observacao;
+    public void setobservacao(String observacao) {
+        this.observacao = observacao;
     }
 
     @Override

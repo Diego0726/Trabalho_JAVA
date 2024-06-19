@@ -4,34 +4,34 @@ package DTO;
 
 public class UsuarioDTO {
     private int ID;
-    private String Nome;
-    private int Idade;
-    private String Genero;
-    private String Email;
-    private String Senha;
+    private String nome;
+    private int idade;
+    private String genero;
+    private String email;
+    private String senha;
 
     public int getID() {
         return ID;
     }
 
-    public String getNome() {
-        return Nome;
+    public String getnome() {
+        return nome;
     }
 
-    public int getIdade() {
-        return Idade;
+    public int getidade() {
+        return idade;
     }
 
-    public String getGenero() {
-        return Genero;
+    public String getgenero() {
+        return genero;
     }
 
-    public String getEmail() {
-        return Email;
+    public String getemail() {
+        return email;
     }
 
-    public String getSenha() {
-        return Senha;
+    public String getsenha() {
+        return senha;
     }
 
     
@@ -39,24 +39,24 @@ public class UsuarioDTO {
         this.ID = ID;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setnome(String nome) {
+        this.nome = nome;
     }
 
-    public void setIdade(int Idade) {
-        this.Idade = Idade;
+    public void setidade(int idade) {
+        this.idade = idade;
     }
 
-    public void setGenero(String Genero) {
-        this.Genero = Genero;
+    public void setgenero(String genero) {
+        this.genero = genero;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setemail(String email) {
+        this.email = email;
     }
 
-    public void setSenha(String Senha) {
-        this.Senha = Senha;
+    public void setsenha(String senha) {
+        this.senha = senha;
     }
 
     @Override
