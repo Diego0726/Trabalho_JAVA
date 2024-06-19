@@ -132,12 +132,15 @@ public class telaCadastro extends javax.swing.JFrame {
          UsuarioDTO objusuariodto = new UsuarioDTO();
             objusuariodto.setnome(nome);
             objusuariodto.setidade(idade);
+            objusuariodto.setgenero(genero);
+            objusuariodto.setemail(email);
+            objusuariodto.setsenha(senha);
             
         UsuarioDAO objusuariodao = new UsuarioDAO();
         objusuariodao.cadastrarUsuario(objusuariodto);
         
-        pucca_Login objpucca_Login = new pucca_Login();
-                objpucca_Login.setVisible(true);
+        telaInicial objTelaInicial = new telaIncial();
+                objTelaInicial.setVisible(true);
                 dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
 
