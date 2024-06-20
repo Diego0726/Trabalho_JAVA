@@ -6,8 +6,8 @@ public class DoramaDTO {
     private String plataforma;
     private String nome;
     private String genero;
-    private int temp;
-    private int eps;
+    private String temp;
+    private String eps;
     private String observacao;
 
     
@@ -28,11 +28,11 @@ public class DoramaDTO {
         return genero;
     }
 
-    public int gettemp() {
+    public String gettemp() {
         return temp;
     }
 
-    public int geteps() {
+    public String geteps() {
         return eps;
     }
 
@@ -46,7 +46,7 @@ public class DoramaDTO {
         this.ID = ID;
     }
 
-    public void setplataforma(String Plataforma) {
+    public void setplataforma(String plataforma) {
         this.plataforma = plataforma;
     }
 
@@ -58,11 +58,11 @@ public class DoramaDTO {
         this.genero = genero;
     }
 
-    public void settemp(int temp) {
+    public void settemp(String temp) {
         this.temp = temp;
     }
 
-    public void seteps(int Eps) {
+    public void seteps(String eps) {
         this.eps = eps;
     }
 
