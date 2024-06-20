@@ -6,9 +6,10 @@ public class DoramaDTO {
     private String plataforma;
     private String nome;
     private String genero;
-    private int temp;
-    private int eps;
+    private float temp;
+    private float eps;
     private String observacao;
+    public String get;
 
     
     //GET
@@ -28,11 +29,11 @@ public class DoramaDTO {
         return genero;
     }
 
-    public int gettemp() {
+    public float gettemp() {
         return temp;
     }
 
-    public int geteps() {
+    public float geteps() {
         return eps;
     }
 
@@ -46,7 +47,7 @@ public class DoramaDTO {
         this.ID = ID;
     }
 
-    public void setplataforma(String Plataforma) {
+    public void setplataforma(String plataforma) {
         this.plataforma = plataforma;
     }
 
@@ -62,7 +63,7 @@ public class DoramaDTO {
         this.temp = temp;
     }
 
-    public void seteps(int Eps) {
+    public void seteps(int eps) {
         this.eps = eps;
     }
 
@@ -90,6 +91,26 @@ public class DoramaDTO {
         }
         final DoramaDTO other = (DoramaDTO) obj;
         return this.ID == other.ID;
+    }
+
+    public String setplataforma() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String settnome() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String setgenero() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String settemp() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String seteps() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
