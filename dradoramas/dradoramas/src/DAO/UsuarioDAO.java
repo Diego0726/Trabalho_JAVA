@@ -19,7 +19,7 @@ public class UsuarioDAO {
         try {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, objusuariodto.getnome());
-            pstm.setInt(2, objusuariodto.getidade());
+            pstm.setString(2, objusuariodto.getidade());
             pstm.setString(3, objusuariodto.getgenero());
             pstm.setString(4, objusuariodto.getemail());
             pstm.setString(5, objusuariodto.getsenha());

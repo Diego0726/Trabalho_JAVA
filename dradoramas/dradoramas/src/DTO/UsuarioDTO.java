@@ -5,7 +5,7 @@ package DTO;
 public class UsuarioDTO {
     private int ID;
     private String nome;
-    private int idade;
+    private String idade;
     private String genero;
     private String email;
     private String senha;
@@ -18,7 +18,7 @@ public class UsuarioDTO {
         return nome;
     }
 
-    public int getidade() {
+    public String getidade() {
         return idade;
     }
 
@@ -43,7 +43,7 @@ public class UsuarioDTO {
         this.nome = nome;
     }
 
-    public void setidade(int idade) {
+    public void setidade(String idade) {
         this.idade = idade;
     }
 
