@@ -23,8 +23,8 @@ public class DoramaDAO {
             pstm.setString(1, objusuariodto.getplataforma());
             pstm.setString(2, objusuariodto.getnome());
             pstm.setString(3, objusuariodto.getgenero());
-            pstm.setfloat(4, objusuariodto.gettemp());
-            pstm.setfloat(5, objusuariodto.geteps());
+            pstm.setString(4, objusuariodto.gettemp());
+            pstm.setString(5, objusuariodto.geteps());
             pstm.setString(6, objusuariodto.getobservacao());
             
             
@@ -57,6 +57,7 @@ public class DoramaDAO {
             return null;
         }
     }
+
 
 
     
