@@ -120,14 +120,13 @@ public class telaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_idadeActionPerformed
 
     private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
-        String nome, genero, email, senha;
-        Int idade;
+        String nome, idade, genero, email, senha;
         
-        nome = txtnome.getText();
-        idade = txtidade.getText();
-        genero = txtgenero.getText();
-        email = txtemail.getText();
-        senha = txtsenha.getText();
+        nome = nome.getText();
+        idade = idade.getText());
+        genero = genero.getText();
+        email = email.getText();
+        senha = senha.getText();
         
          UsuarioDTO objusuariodto = new UsuarioDTO();
             objusuariodto.setnome(nome);
@@ -139,8 +138,8 @@ public class telaCadastro extends javax.swing.JFrame {
         UsuarioDAO objusuariodao = new UsuarioDAO();
         objusuariodao.cadastrarUsuario(objusuariodto);
         
-        telaInicial objTelaInicial = new telaIncial();
-                objTelaInicial.setVisible(true);
+        telaLogin objTelaLogin = new telaLogin();
+                objTelaLogin.setVisible(true);
                 dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
 
