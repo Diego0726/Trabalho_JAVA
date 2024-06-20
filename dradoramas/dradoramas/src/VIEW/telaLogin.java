@@ -90,8 +90,8 @@ public class telaLogin extends javax.swing.JFrame {
        try {
            String email, senha;
            
-           email = txtemail.getText();
-           senha = txtsenha.getText();
+           email = email.getText();
+           senha = senha.getText();
            
            UsuarioDTO objusuariodto = new UsuarioDTO();
             objusuariodto.setemail(email);

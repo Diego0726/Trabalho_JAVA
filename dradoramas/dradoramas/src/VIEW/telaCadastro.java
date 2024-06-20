@@ -121,26 +121,26 @@ public class telaCadastro extends javax.swing.JFrame {
 
     private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
         String nome, idade, genero, email, senha;
-        
-        nome = nome.getText();
-        idade = idade.getText());
-        genero = genero.getText();
-        email = email.getText();
-        senha = senha.getText();
-        
-         UsuarioDTO objusuariodto = new UsuarioDTO();
-            objusuariodto.setnome(nome);
-            objusuariodto.setidade(idade);
-            objusuariodto.setgenero(genero);
-            objusuariodto.setemail(email);
-            objusuariodto.setsenha(senha);
-            
-        UsuarioDAO objusuariodao = new UsuarioDAO();
-        objusuariodao.cadastrarUsuario(objusuariodto);
-        
-        telaLogin objTelaLogin = new telaLogin();
-                objTelaLogin.setVisible(true);
-                dispose();
+
+        nome = txtNome.getText();  
+        idade = txtIdade.getText();  
+        genero = txtGenero.getText();  
+        email = txtEmail.getText();  
+        senha = txtSenha.getText();  
+
+    UsuarioDTO objusuariodto = new UsuarioDTO();
+        objusuariodto.setnome(nome);
+        objusuariodto.setidade(idade); 
+        objusuariodto.setgenero(genero);
+        objusuariodto.setemail(email);
+        objusuariodto.setsenha(senha);
+
+    UsuarioDAO objusuariodao = new UsuarioDAO();
+    objusuariodao.cadastrarUsuario(objusuariodto);
+
+    telaLogin objTelaLogin = new telaLogin();
+        objTelaLogin.setVisible(true);
+        dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
 
     /**

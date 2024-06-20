@@ -1,8 +1,5 @@
 package DAO;
 
-
-<<<<<<< HEAD
-=======
 import DTO.DoramaDTO;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,15 +8,13 @@ import DTO.UsuarioDTO;
 import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
 
-
->>>>>>> db0fd768d474d3891f82c3615b40c2aac562355a
 public class DoramaDAO {
     
     Connection conn;
     PreparedStatement pstm;
     
     public void cadastrarDorama(UsuarioDTO objusuariodto) {
-        String sql = "insert into usuario (plataforma, nome, genero, temp, eps,observacao) values (?,?,?,?,?,?)";
+        String sql = "insert into usuario (plataforma, nome, genero, temp, eps, observacao) values (?,?,?,?,?,?)";
         conn = new ConexaoDAO().conectaBD();
           
         try {
@@ -30,7 +25,6 @@ public class DoramaDAO {
             pstm.setString(4, objusuariodto.gettemp());
             pstm.setString(5, objusuariodto.geteps());
             pstm.setString(6, objusuariodto.getobservacao());
-            
             
             pstm.execute();
             pstm.close();
