@@ -152,8 +152,9 @@ public class telaLogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new telaLogin().setVisible(true);
+                new telaLogin.java().setVisible(true);
             }
         });
     }
@@ -164,4 +165,5 @@ public class telaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel login;
     private javax.swing.JPasswordField senha;
     // End of variables declaration//GEN-END:variables
-}
+
+
