@@ -29,11 +29,11 @@ public class DoramaDTO {
         return genero;
     }
 
-    public float gettemp() {
+    public String gettemp() {
         return temp;
     }
 
-    public float geteps() {
+    public String geteps() {
         return eps;
     }
 
@@ -59,11 +59,11 @@ public class DoramaDTO {
         this.genero = genero;
     }
 
-    public void settemp(int temp) {
+    public void settemp (String temp) {
         this.temp = temp;
     }
 
-    public void seteps(int eps) {
+    public void seteps(String eps) {
         this.eps = eps;
     }
 

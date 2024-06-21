@@ -88,14 +88,14 @@ public class telaLogin extends javax.swing.JFrame {
 
     private void entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarActionPerformed
        try {
-           String email, senha;
            
-           email = txtemail.getText();
-           senha = txtsenha.getText();
+           
+           String  emailText = email.getText();
+           String  senhaText = new String (senha.getPassword());
            
            UsuarioDTO objusuariodto = new UsuarioDTO();
-            objusuariodto.setemail(email);
-            objusuariodto.setsenha(senha);
+            objusuariodto.setemail(emailText);
+            objusuariodto.setsenha(senhaText);
            
             UsuarioDAO objusariodao = new UsuarioDAO();
             ResultSet rsusariodao = objusariodao.autenticacaoUsuario(objusuariodto);

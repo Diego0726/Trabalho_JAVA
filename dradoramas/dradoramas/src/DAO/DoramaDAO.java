@@ -34,34 +34,47 @@ public class DoramaDAO {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "UsuarioDAO: " + erro);
         }
-        
-        public ResultSet autenticacaDorama(DoramaDTO objusuariodto){
+    }
+    
+        public void autenticaDorama(DoramaDTO objdoramadto){
         conn = new ConexaoDAO().conectaBD();
 
         try {
             String sql = "select * from usuario where plataforma = ? and nome = ? and genero = ? and temp = ? and eps = ? and observacao ";
-            PreparedStatement pstm;
+            
+            
+            
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1, objusuariodto.setplataforma());
-            pstm.setString(2, objusuariodto.settnome());
-            pstm.setString(3, objusuariodto.setgenero());
-            pstm.setString(4, objusuariodto.settemp());
-            pstm.setString(5, objusuariodto.seteps());
-            pstm.setString(6, objusuariodto.getobservacao());
+            
+            pstm.setString(1, objdoramadto.getplataforma());
+            pstm.setString(2, objdoramadto.getnome());
+            pstm.setString(3, objdoramadto.getgenero());
+            pstm.setString(4, objdoramadto.gettemp());
+            pstm.setString(5, objdoramadto.geteps());
+            pstm.setString(6, objdoramadto.getobservacao());
+            
+            pstm.execute();
+            pstm.close();
 
-            ResultSet rs = pstm.executeQuery();
-            return rs;
-
-        } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "JOptionPaneUsuarioDAO: " + erro);
-            return null;
+            } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, "UsuarioDAO: " + erro);
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Erro ao fechar conexão: " + e);
+            }
         }
-    }
+
+
+   
+        }}
 
 
 
     
     
     
-    
-}
+   
