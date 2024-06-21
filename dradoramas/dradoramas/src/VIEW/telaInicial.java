@@ -8,12 +8,12 @@ package VIEW;
  *
  * @author Pichau
  */
-public class telaIncial extends javax.swing.JFrame {
+public class telaInicial extends javax.swing.JFrame {
 
     /**
-     * Creates new form telaIncial1
+     * Creates new form telaInicial
      */
-    public telaIncial() {
+    public telaInicial() {
         initComponents();
     }
 
@@ -26,37 +26,37 @@ public class telaIncial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btncomeca = new javax.swing.JButton();
-        inicial = new javax.swing.JLabel();
+        btncome = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        btncomeca.setBackground(new java.awt.Color(252, 18, 76));
-        btncomeca.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        btncomeca.setForeground(new java.awt.Color(255, 255, 255));
-        btncomeca.setText("COMEÇAR");
-        btncomeca.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btncomeca.addActionListener(new java.awt.event.ActionListener() {
+        btncome.setBackground(new java.awt.Color(252, 18, 76));
+        btncome.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        btncome.setForeground(new java.awt.Color(255, 255, 255));
+        btncome.setText("COMEÇAR");
+        btncome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btncome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncomecaActionPerformed(evt);
+                btncomeActionPerformed(evt);
             }
         });
-        getContentPane().add(btncomeca);
-        btncomeca.setBounds(170, 840, 71, 22);
+        getContentPane().add(btncome);
+        btncome.setBounds(180, 840, 75, 23);
 
-        inicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/1.png"))); // NOI18N
-        getContentPane().add(inicial);
-        inicial.setBounds(-3, -4, 440, 940);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/1.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 430, 932);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btncomecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomecaActionPerformed
+    private void btncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomeActionPerformed
         telaCadastro objTelaCadastro = new telaCadastro();
             objTelaCadastro.setVisible(true);
             dispose();
-    }//GEN-LAST:event_btncomecaActionPerformed
+    }//GEN-LAST:event_btncomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -75,27 +75,26 @@ public class telaIncial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(telaIncial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(telaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new telaIncial().setVisible(true);
+                new telaInicial().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncomeca;
-    private javax.swing.JLabel inicial;
+    private javax.swing.JButton btncome;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
