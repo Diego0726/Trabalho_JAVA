@@ -13,63 +13,67 @@ public class telaCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        email = new javax.swing.JTextField();
-        nome = new javax.swing.JTextField();
-        genero = new javax.swing.JTextField();
-        idade = new javax.swing.JTextField();
-        senha = new javax.swing.JPasswordField();
+        txtsenha = new javax.swing.JTextField();
+        txtemail = new javax.swing.JTextField();
+        txtnome = new javax.swing.JTextField();
+        txtgenero = new javax.swing.JTextField();
+        txtidade = new javax.swing.JTextField();
         prosseguir = new javax.swing.JButton();
         CADASTRO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(430, 932));
         setMinimumSize(new java.awt.Dimension(430, 932));
         getContentPane().setLayout(null);
 
-        email.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        email.setBorder(null);
-        email.addActionListener(new java.awt.event.ActionListener() {
+        txtsenha.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtsenha.setBorder(null);
+        txtsenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                txtsenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(email);
-        email.setBounds(50, 690, 330, 20);
+        getContentPane().add(txtsenha);
+        txtsenha.setBounds(50, 790, 330, 30);
 
-        nome.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        nome.setBorder(null);
-        nome.addActionListener(new java.awt.event.ActionListener() {
+        txtemail.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtemail.setBorder(null);
+        txtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeActionPerformed(evt);
+                txtemailActionPerformed(evt);
             }
         });
-        getContentPane().add(nome);
-        nome.setBounds(50, 470, 330, 30);
+        getContentPane().add(txtemail);
+        txtemail.setBounds(50, 690, 330, 20);
 
-        genero.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        genero.setBorder(null);
-        genero.addActionListener(new java.awt.event.ActionListener() {
+        txtnome.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtnome.setBorder(null);
+        txtnome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generoActionPerformed(evt);
+                txtnomeActionPerformed(evt);
             }
         });
-        getContentPane().add(genero);
-        genero.setBounds(240, 580, 140, 20);
+        getContentPane().add(txtnome);
+        txtnome.setBounds(50, 470, 330, 30);
 
-        idade.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        idade.setBorder(null);
-        idade.addActionListener(new java.awt.event.ActionListener() {
+        txtgenero.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtgenero.setBorder(null);
+        txtgenero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idadeActionPerformed(evt);
+                txtgeneroActionPerformed(evt);
             }
         });
-        getContentPane().add(idade);
-        idade.setBounds(50, 580, 150, 20);
+        getContentPane().add(txtgenero);
+        txtgenero.setBounds(240, 580, 140, 20);
 
-        senha.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        senha.setBorder(null);
-        getContentPane().add(senha);
-        senha.setBounds(50, 790, 330, 30);
+        txtidade.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtidade.setBorder(null);
+        txtidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidadeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtidade);
+        txtidade.setBounds(50, 580, 150, 20);
 
         prosseguir.setBackground(new java.awt.Color(252, 18, 76));
         prosseguir.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
@@ -91,30 +95,30 @@ public class telaCadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void txtsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_txtsenhaActionPerformed
 
-    private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
+    private void txtnomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeActionPerformed
+    }//GEN-LAST:event_txtnomeActionPerformed
 
-    private void generoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoActionPerformed
+    private void txtgeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgeneroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_generoActionPerformed
+    }//GEN-LAST:event_txtgeneroActionPerformed
 
-    private void idadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeActionPerformed
+    private void txtidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idadeActionPerformed
+    }//GEN-LAST:event_txtidadeActionPerformed
 
     private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
         String nome, idade, genero, email, senha;
 
-        nome = txtNome.getText();  
-        idade = txtIdade.getText();  
-        genero = txtGenero.getText();  
-        email = txtEmail.getText();  
-        senha = txtSenha.getText();  
+        nome = txtnome.getText();  
+        idade = txtidade.getText();  
+        genero = txtgenero.getText();  
+        email = txtsenha.getText();  
+        senha = txtsenha.getText();  
 
     UsuarioDTO objusuariodto = new UsuarioDTO();
         objusuariodto.setnome(nome);
@@ -126,10 +130,14 @@ public class telaCadastro extends javax.swing.JFrame {
     UsuarioDAO objusuariodao = new UsuarioDAO();
     objusuariodao.cadastrarUsuario(objusuariodto);
 
-    telaLogin objTelaLogin = new telaLogin();
-        objTelaLogin.setVisible(true);
-        dispose();
+        telaLogin objTelaLogin = new telaLogin();
+            objTelaLogin.setVisible(true);
+            dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
+
+    private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtemailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,11 +176,11 @@ public class telaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CADASTRO;
-    private javax.swing.JTextField email;
-    private javax.swing.JTextField genero;
-    private javax.swing.JTextField idade;
-    private javax.swing.JTextField nome;
     private javax.swing.JButton prosseguir;
-    private javax.swing.JPasswordField senha;
+    private javax.swing.JTextField txtemail;
+    private javax.swing.JTextField txtgenero;
+    private javax.swing.JTextField txtidade;
+    private javax.swing.JTextField txtnome;
+    private javax.swing.JTextField txtsenha;
     // End of variables declaration//GEN-END:variables
 }

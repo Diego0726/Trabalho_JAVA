@@ -33,35 +33,34 @@ public class telaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        senha = new javax.swing.JPasswordField();
-        email = new javax.swing.JTextField();
+        txtemail = new javax.swing.JTextField();
+        txtsenha = new javax.swing.JTextField();
         entrar = new javax.swing.JButton();
         login = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(430, 932));
         setMinimumSize(new java.awt.Dimension(430, 932));
         getContentPane().setLayout(null);
 
-        senha.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        senha.setBorder(null);
-        senha.addActionListener(new java.awt.event.ActionListener() {
+        txtemail.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtemail.setBorder(null);
+        txtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaActionPerformed(evt);
+                txtemailActionPerformed(evt);
             }
         });
-        getContentPane().add(senha);
-        senha.setBounds(40, 790, 350, 20);
+        getContentPane().add(txtemail);
+        txtemail.setBounds(40, 670, 350, 30);
 
-        email.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        email.setBorder(null);
-        email.addActionListener(new java.awt.event.ActionListener() {
+        txtsenha.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtsenha.setBorder(null);
+        txtsenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                txtsenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(email);
-        email.setBounds(40, 670, 350, 30);
+        getContentPane().add(txtsenha);
+        txtsenha.setBounds(40, 790, 350, 20);
 
         entrar.setBackground(new java.awt.Color(252, 18, 76));
         entrar.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
@@ -90,8 +89,8 @@ public class telaLogin extends javax.swing.JFrame {
        try {
            String email, senha;
            
-           email = email.getText();
-           senha = senha.getText();
+           email = txtemail.getText();
+           senha = txtsenha.getText();
            
            UsuarioDTO objusuariodto = new UsuarioDTO();
             objusuariodto.setemail(email);
@@ -115,13 +114,13 @@ public class telaLogin extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_entrarActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_txtemailActionPerformed
 
-    private void senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaActionPerformed
+    private void txtsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaActionPerformed
+    }//GEN-LAST:event_txtsenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,9 +158,9 @@ public class telaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField email;
     private javax.swing.JButton entrar;
     private javax.swing.JLabel login;
-    private javax.swing.JPasswordField senha;
+    private javax.swing.JTextField txtemail;
+    private javax.swing.JTextField txtsenha;
     // End of variables declaration//GEN-END:variables
 }
