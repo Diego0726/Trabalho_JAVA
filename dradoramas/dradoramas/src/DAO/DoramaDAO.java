@@ -1,10 +1,10 @@
 package DAO;
 
-<<<<<<< HEAD
-import DTO.DoramaDTO;
-=======
 
->>>>>>> 3d1190d2f44cb9a11528778a14f6254e7c0951a9
+import DTO.DoramaDTO;
+
+
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.ResultSet;
@@ -12,32 +12,31 @@ import DTO.DoramaDTO;
 import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 3d1190d2f44cb9a11528778a14f6254e7c0951a9
+
+
+
 public class DoramaDAO {
     
     Connection conn;
     PreparedStatement pstm;
     
-<<<<<<< HEAD
-    public void cadastrarDorama(UsuarioDTO objusuariodto) {
+
+    public void cadastrarDorama(DoramaDTO objDoramadto) {
         String sql = "insert into usuario (plataforma, nome, genero, temp, eps, observacao) values (?,?,?,?,?,?)";
-=======
-    public void cadastrarDorama(DoramaDTO objusuariodto) {
-        String sql = "insert into usuario (plataforma, nome, genero, temp, eps,observacao) values (?,?,?,?,?,?)";
->>>>>>> 3d1190d2f44cb9a11528778a14f6254e7c0951a9
+
+    
+
         conn = new ConexaoDAO().conectaBD();
           
         try {
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1, objusuariodto.getplataforma());
-            pstm.setString(2, objusuariodto.getnome());
-            pstm.setString(3, objusuariodto.getgenero());
-            pstm.setString(4, objusuariodto.gettemp());
-            pstm.setString(5, objusuariodto.geteps());
-            pstm.setString(6, objusuariodto.getobservacao());
+            pstm.setString(1, objDoramadto.getplataforma());
+            pstm.setString(2, objDoramadto.getnome());
+            pstm.setString(3, objDoramadto.getgenero());
+            pstm.setString(4, objDoramadto.gettemp());
+            pstm.setString(5, objDoramadto.geteps());
+            pstm.setString(6, objDoramadto.getobservacao());
             
             pstm.execute();
             pstm.close();
