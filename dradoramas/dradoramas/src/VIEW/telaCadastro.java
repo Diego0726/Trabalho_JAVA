@@ -18,7 +18,7 @@ public class telaCadastro extends javax.swing.JFrame {
         txtnome = new javax.swing.JTextField();
         txtgenero = new javax.swing.JTextField();
         txtidade = new javax.swing.JTextField();
-        prosseguir = new javax.swing.JButton();
+        btnpross = new javax.swing.JButton();
         CADASTRO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,18 +75,18 @@ public class telaCadastro extends javax.swing.JFrame {
         getContentPane().add(txtidade);
         txtidade.setBounds(50, 580, 150, 20);
 
-        prosseguir.setBackground(new java.awt.Color(252, 18, 76));
-        prosseguir.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        prosseguir.setForeground(new java.awt.Color(255, 255, 255));
-        prosseguir.setText("PROSSEGUIR");
-        prosseguir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        prosseguir.addActionListener(new java.awt.event.ActionListener() {
+        btnpross.setBackground(new java.awt.Color(252, 18, 76));
+        btnpross.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        btnpross.setForeground(new java.awt.Color(255, 255, 255));
+        btnpross.setText("PROSSEGUIR");
+        btnpross.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnpross.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prosseguirActionPerformed(evt);
+                btnprossActionPerformed(evt);
             }
         });
-        getContentPane().add(prosseguir);
-        prosseguir.setBounds(160, 840, 120, 30);
+        getContentPane().add(btnpross);
+        btnpross.setBounds(160, 840, 120, 30);
 
         CADASTRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/2.png"))); // NOI18N
         getContentPane().add(CADASTRO);
@@ -111,7 +111,7 @@ public class telaCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtidadeActionPerformed
 
-    private void prosseguirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prosseguirActionPerformed
+    private void btnprossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprossActionPerformed
         String nome, idade, genero, email, senha;
 
         nome = txtnome.getText();  
@@ -130,10 +130,10 @@ public class telaCadastro extends javax.swing.JFrame {
     UsuarioDAO objusuariodao = new UsuarioDAO();
     objusuariodao.cadastrarUsuario(objusuariodto);
 
-        telaLogin objTelaLogin = new telaLogin();
-            objTelaLogin.setVisible(true);
-            dispose();
-    }//GEN-LAST:event_prosseguirActionPerformed
+    telaLogin1 objTelaLogin = new telaLogin1();
+        objTelaLogin.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnprossActionPerformed
 
     private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
         // TODO add your handling code here:
@@ -176,7 +176,7 @@ public class telaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CADASTRO;
-    private javax.swing.JButton prosseguir;
+    private javax.swing.JButton btnpross;
     private javax.swing.JTextField txtemail;
     private javax.swing.JTextField txtgenero;
     private javax.swing.JTextField txtidade;
