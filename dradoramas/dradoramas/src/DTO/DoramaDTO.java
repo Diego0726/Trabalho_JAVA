@@ -6,9 +6,10 @@ public class DoramaDTO {
     private String plataforma;
     private String nome;
     private String genero;
-    private String temp;
-    private String eps;
+    private float temp;
+    private float eps;
     private String observacao;
+    public String get;
 
     
     //GET
@@ -28,11 +29,11 @@ public class DoramaDTO {
         return genero;
     }
 
-    public String gettemp() {
+    public float gettemp() {
         return temp;
     }
 
-    public String geteps() {
+    public float geteps() {
         return eps;
     }
 
@@ -58,11 +59,11 @@ public class DoramaDTO {
         this.genero = genero;
     }
 
-    public void settemp(String temp) {
+    public void settemp(int temp) {
         this.temp = temp;
     }
 
-    public void seteps(String eps) {
+    public void seteps(int eps) {
         this.eps = eps;
     }
 
@@ -90,6 +91,26 @@ public class DoramaDTO {
         }
         final DoramaDTO other = (DoramaDTO) obj;
         return this.ID == other.ID;
+    }
+
+    public String setplataforma() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String settnome() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String setgenero() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String settemp() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String seteps() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
