@@ -12,7 +12,7 @@ public class DoramaDAO {
     PreparedStatement pstm;
     
     public void cadastrarDorama(DoramaDTO objdoramadto) {
-        String sql = "INSERT INTO doramas (plataforma, nome, genero, temp, eps, observacao, usuario_ID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO doramas (plataforma, nome, genero, temp, eps, observacao, usuario_email) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         conn = new ConexaoDAO().conectaBD();
           
@@ -24,7 +24,7 @@ public class DoramaDAO {
             pstm.setString(4, objdoramadto.getTemp());
             pstm.setString(5, objdoramadto.getEps());
             pstm.setString(6, objdoramadto.getObservacao());
-            pstm.setInt(7, objdoramadto.getUsuario().getID()); 
+            pstm.setString(7, objdoramadto.getUsuario_email()); 
             
             pstm.execute();
             pstm.close();

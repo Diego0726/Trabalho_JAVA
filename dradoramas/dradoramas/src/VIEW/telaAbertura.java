@@ -15,6 +15,7 @@ public class telaAbertura extends javax.swing.JFrame {
      */
     public telaAbertura() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

@@ -15,6 +15,7 @@ public class telaConfigurações extends javax.swing.JFrame {
      */
     public telaConfigurações() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

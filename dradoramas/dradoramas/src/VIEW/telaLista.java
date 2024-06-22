@@ -15,6 +15,7 @@ public class telaLista extends javax.swing.JFrame {
      */
     public telaLista() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

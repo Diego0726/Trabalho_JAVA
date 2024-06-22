@@ -1,6 +1,7 @@
 package VIEW;
 
 import DAO.UsuarioDAO;
+import DTO.Sessao;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,6 +14,7 @@ public class telaLogin1 extends javax.swing.JFrame {
      */
     public telaLogin1() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -98,6 +100,9 @@ public class telaLogin1 extends javax.swing.JFrame {
             ResultSet rsusariodao = objusariodao.autenticacaoUsuario(objusuariodto);
             
             if(rsusariodao.next()){
+                Sessao.setUsuario_email(email); 
+                System.out.println("Email armazenado na sessão: " + email);
+
                 telaAbertura objTelaAbertura = new telaAbertura();
                 objTelaAbertura.setVisible(true);
                 dispose();
@@ -106,7 +111,7 @@ public class telaLogin1 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"Usuário ou Senha Inválida!");
             }
             } catch (SQLException erro) {
-               JOptionPane.showMessageDialog(null, "pucca_Login" + erro);
+               JOptionPane.showMessageDialog(null, "Login" + erro);
             }
         
     }//GEN-LAST:event_btnentrarActionPerformed

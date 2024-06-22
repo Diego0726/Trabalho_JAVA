@@ -15,6 +15,7 @@ public class telaDorama extends javax.swing.JFrame {
      */
     public telaDorama() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

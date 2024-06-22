@@ -2,6 +2,14 @@ package DTO;
 
 public class DoramaDTO {
 
+    public String getUsuario_email() {
+        return usuario_email;
+    }
+
+    public void setUsuario_email(String usuario_email) {
+        this.usuario_email = usuario_email;
+    }
+
     private int ID;
     private String plataforma;
     private String nome;
@@ -9,7 +17,8 @@ public class DoramaDTO {
     private String temp;
     private String eps;
     private String observacao;
-    private UsuarioDTO usuario; 
+    private String usuario_email;
+    
 
     // GETTERS
     public int getID() {
@@ -40,9 +49,6 @@ public class DoramaDTO {
         return observacao;
     }
 
-    public UsuarioDTO getUsuario() {
-        return usuario;
-    }
 
     // SETTERS
     public void setID(int ID) {
@@ -71,10 +77,6 @@ public class DoramaDTO {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
-    }
-
-    public void setUsuario(UsuarioDTO usuario) {
-        this.usuario = usuario;
     }
 
     @Override

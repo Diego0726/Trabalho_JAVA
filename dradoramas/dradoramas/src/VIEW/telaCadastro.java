@@ -14,6 +14,7 @@ public class telaCadastro extends javax.swing.JFrame {
      */
     public telaCadastro() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

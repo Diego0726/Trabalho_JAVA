@@ -6,7 +6,9 @@ package VIEW;
 
 import DAO.DoramaDAO;
 import DTO.DoramaDTO;
+import DTO.Sessao;
 import DTO.UsuarioDTO;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +21,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
      */
     public telaAdicionarDorama() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -150,6 +153,14 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         temp = txttemporada.getText();
         eps = txtepisodio.getText();
         observacao = txtobservacao.getText();
+        String usuario_email = Sessao.getUsuario_email();
+        System.out.println("Email recuperado da sessão: " + usuario_email);
+        
+        
+        if (usuario_email == null || usuario_email.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Erro: Usuário não está logado corretamente.");
+         return;
+}
         
         DoramaDTO objdoramadto = new DoramaDTO();
             objdoramadto.setPlataforma(plataforma);
@@ -158,6 +169,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
             objdoramadto.setTemp(temp);
             objdoramadto.setEps(eps);
             objdoramadto.setObservacao(observacao);
+            objdoramadto.setUsuario_email(usuario_email);
                
         DoramaDAO objdoramadao = new DoramaDAO();   
         objdoramadao.cadastrarDorama(objdoramadto);
