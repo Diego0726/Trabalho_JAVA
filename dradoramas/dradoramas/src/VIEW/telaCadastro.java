@@ -138,8 +138,8 @@ public class telaCadastro extends javax.swing.JFrame {
         UsuarioDAO objusuariodao = new UsuarioDAO();
         objusuariodao.cadastrarUsuario(objusuariodto);
         
-        telaCadastro objTelaLogin = new telaCadastro();
-                objTelaLogin.setVisible(true);
+        telaLogin1 objTelaLogin1 = new telaLogin1();
+                objTelaLogin1.setVisible(true);
                 dispose();
     }//GEN-LAST:event_prosseguirActionPerformed
 

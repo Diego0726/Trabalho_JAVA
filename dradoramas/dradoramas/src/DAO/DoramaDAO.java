@@ -44,7 +44,7 @@ public class DoramaDAO {
         conn = new ConexaoDAO().conectaBD();
 
         try {
-            String sql = "select * from usuario where plataforma = ? and nome = ? and genero = ? and temp = ? and eps = ? and observacao ";
+            String sql = "select * from usuario where plataforma = ? and nome = ? and genero = ? and temp = ? and eps = ? and observacao = ?";
             
             
             
