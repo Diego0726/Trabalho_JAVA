@@ -28,7 +28,6 @@ public class telaAbertura extends javax.swing.JFrame {
     private void initComponents() {
 
         btnSair = new javax.swing.JButton();
-        btnConfigu = new javax.swing.JButton();
         btnadiciona = new javax.swing.JButton();
         btnlista = new javax.swing.JButton();
         ABERTURA = new javax.swing.JLabel();
@@ -47,20 +46,7 @@ public class telaAbertura extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSair);
-        btnSair.setBounds(0, 490, 90, 50);
-
-        btnConfigu.setBackground(new java.awt.Color(252, 18, 76));
-        btnConfigu.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
-        btnConfigu.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfigu.setText("Configurações");
-        btnConfigu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnConfigu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfiguActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnConfigu);
-        btnConfigu.setBounds(0, 420, 190, 60);
+        btnSair.setBounds(0, 410, 90, 60);
 
         btnadiciona.setBackground(new java.awt.Color(252, 18, 76));
         btnadiciona.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
@@ -73,7 +59,7 @@ public class telaAbertura extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnadiciona);
-        btnadiciona.setBounds(0, 360, 230, 60);
+        btnadiciona.setBounds(0, 350, 230, 60);
 
         btnlista.setBackground(new java.awt.Color(252, 18, 76));
         btnlista.setFont(new java.awt.Font("Bahnschrift", 1, 24)); // NOI18N
@@ -88,7 +74,7 @@ public class telaAbertura extends javax.swing.JFrame {
         getContentPane().add(btnlista);
         btnlista.setBounds(0, 300, 160, 50);
 
-        ABERTURA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/4.png"))); // NOI18N
+        ABERTURA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/dra. doramas app.png"))); // NOI18N
         getContentPane().add(ABERTURA);
         ABERTURA.setBounds(0, 0, 430, 932);
 
@@ -104,12 +90,6 @@ public class telaAbertura extends javax.swing.JFrame {
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
-
-    private void btnConfiguActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguActionPerformed
-        telaConfigurações objTelaConfigurações = new telaConfigurações();
-            objTelaConfigurações.setVisible(true);
-            dispose();
-    }//GEN-LAST:event_btnConfiguActionPerformed
 
     private void btnlistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlistaActionPerformed
         telaLista objTelaLista = new telaLista();
@@ -154,7 +134,6 @@ public class telaAbertura extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ABERTURA;
-    private javax.swing.JButton btnConfigu;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnadiciona;
     private javax.swing.JButton btnlista;

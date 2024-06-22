@@ -4,6 +4,13 @@
  */
 package VIEW;
 
+import DAO.DoramaDAO;
+import DTO.DoramaDTO;
+import javax.swing.JOptionPane;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Pichau
@@ -16,6 +23,7 @@ public class telaLista extends javax.swing.JFrame {
     public telaLista() {
         initComponents();
         setLocationRelativeTo(null);
+        listarDoramas();
     }
 
     /**
@@ -27,76 +35,30 @@ public class telaLista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        generoDorama = new javax.swing.JTextArea();
-        nomeDorama1 = new javax.swing.JTextArea();
-        nomeDorama2 = new javax.swing.JTextArea();
-        nomeDorama3 = new javax.swing.JTextArea();
-        generoDorama1 = new javax.swing.JTextArea();
-        generoDorama2 = new javax.swing.JTextArea();
-        verLista = new javax.swing.JButton();
+        addDorama = new javax.swing.JButton();
         voltar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaDorama = new javax.swing.JTable();
         lista = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        generoDorama.setColumns(20);
-        generoDorama.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        generoDorama.setRows(5);
-        generoDorama.setBorder(null);
-        getContentPane().add(generoDorama);
-        generoDorama.setBounds(240, 570, 150, 20);
-
-        nomeDorama1.setColumns(20);
-        nomeDorama1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        nomeDorama1.setRows(5);
-        nomeDorama1.setBorder(null);
-        getContentPane().add(nomeDorama1);
-        nomeDorama1.setBounds(50, 570, 160, 20);
-
-        nomeDorama2.setColumns(20);
-        nomeDorama2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        nomeDorama2.setRows(5);
-        nomeDorama2.setBorder(null);
-        getContentPane().add(nomeDorama2);
-        nomeDorama2.setBounds(50, 354, 160, 20);
-
-        nomeDorama3.setColumns(20);
-        nomeDorama3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        nomeDorama3.setRows(5);
-        nomeDorama3.setBorder(null);
-        getContentPane().add(nomeDorama3);
-        nomeDorama3.setBounds(50, 460, 160, 20);
-
-        generoDorama1.setColumns(20);
-        generoDorama1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        generoDorama1.setRows(5);
-        generoDorama1.setBorder(null);
-        getContentPane().add(generoDorama1);
-        generoDorama1.setBounds(240, 350, 140, 30);
-
-        generoDorama2.setColumns(20);
-        generoDorama2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        generoDorama2.setRows(5);
-        generoDorama2.setBorder(null);
-        getContentPane().add(generoDorama2);
-        generoDorama2.setBounds(240, 460, 140, 20);
-
-        verLista.setBackground(new java.awt.Color(252, 18, 76));
-        verLista.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        verLista.setForeground(new java.awt.Color(255, 255, 255));
-        verLista.setText("VER LISTA");
-        verLista.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        verLista.setMaximumSize(new java.awt.Dimension(71, 22));
-        verLista.setMinimumSize(new java.awt.Dimension(71, 22));
-        verLista.setPreferredSize(new java.awt.Dimension(71, 22));
-        verLista.addActionListener(new java.awt.event.ActionListener() {
+        addDorama.setBackground(new java.awt.Color(252, 18, 76));
+        addDorama.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        addDorama.setForeground(new java.awt.Color(255, 255, 255));
+        addDorama.setText("ADICIONAR NOVO DORAMA");
+        addDorama.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addDorama.setMaximumSize(new java.awt.Dimension(71, 22));
+        addDorama.setMinimumSize(new java.awt.Dimension(71, 22));
+        addDorama.setPreferredSize(new java.awt.Dimension(71, 22));
+        addDorama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verListaActionPerformed(evt);
+                addDoramaActionPerformed(evt);
             }
         });
-        getContentPane().add(verLista);
-        verLista.setBounds(170, 810, 90, 30);
+        getContentPane().add(addDorama);
+        addDorama.setBounds(110, 810, 210, 30);
 
         voltar.setBackground(new java.awt.Color(252, 18, 76));
         voltar.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
@@ -114,6 +76,47 @@ public class telaLista extends javax.swing.JFrame {
         getContentPane().add(voltar);
         voltar.setBounds(170, 860, 90, 30);
 
+        jScrollPane1.setBackground(new java.awt.Color(252, 18, 76));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        tabelaDorama.setBackground(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
+        tabelaDorama.setForeground(new java.awt.Color(255, 255, 255));
+        tabelaDorama.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Plataforma", "Nome", "Gênero", "Temporada", "Episódio", "Observação"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tabelaDorama.setFocusable(false);
+        tabelaDorama.setGridColor(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setPreferredSize(new java.awt.Dimension(430, 80));
+        tabelaDorama.setSelectionBackground(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tabelaDorama.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tabelaDorama);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(0, 280, 430, 510);
+
         lista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/6.png"))); // NOI18N
         getContentPane().add(lista);
         lista.setBounds(0, 0, 430, 932);
@@ -123,12 +126,16 @@ public class telaLista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
-       
+         telaAbertura objTelaAbertura = new telaAbertura();
+            objTelaAbertura.setVisible(true);
+            dispose();
     }//GEN-LAST:event_voltarActionPerformed
 
-    private void verListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verListaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_verListaActionPerformed
+    private void addDoramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDoramaActionPerformed
+       telaAdicionarDorama objTelaAdicionarDorama = new telaAdicionarDorama();
+            objTelaAdicionarDorama.setVisible(true);
+            dispose();
+    }//GEN-LAST:event_addDoramaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,14 +173,38 @@ public class telaLista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea generoDorama;
-    private javax.swing.JTextArea generoDorama1;
-    private javax.swing.JTextArea generoDorama2;
+    private javax.swing.JButton addDorama;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lista;
-    private javax.swing.JTextArea nomeDorama1;
-    private javax.swing.JTextArea nomeDorama2;
-    private javax.swing.JTextArea nomeDorama3;
-    private javax.swing.JButton verLista;
+    private javax.swing.JTable tabelaDorama;
     private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
+
+    private void listarDoramas() {
+
+        try {
+            DoramaDAO objdoramadao = new DoramaDAO();
+
+            DefaultTableModel model = (DefaultTableModel) tabelaDorama.getModel();
+            model.setNumRows(0);
+
+            ArrayList<DoramaDTO> lista = objdoramadao.pesquisarDorama();
+
+            for (int num = 0; num < lista.size(); num++) {
+                model.addRow(new Object[]{
+                    lista.get(num).getPlataforma(),
+                    lista.get(num).getNome(),
+                    lista.get(num).getGenero(),
+                    lista.get(num).getTemp(),
+                    lista.get(num).getEps(),
+                    lista.get(num).getObservacao()
+                });
+            }
+
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "listar Doramas VIEW: " + erro);
+        }
+
+    }
+
 }

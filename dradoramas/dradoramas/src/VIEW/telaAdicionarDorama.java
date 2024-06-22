@@ -40,6 +40,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         txttemporada = new javax.swing.JTextField();
         generoDorama = new javax.swing.JTextField();
         btnadicionar = new javax.swing.JButton();
+        btnvolta = new javax.swing.JButton();
         CADASTRAR = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -112,7 +113,22 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
                 btnadicionarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnadicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 860, 90, 30));
+        getContentPane().add(btnadicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 860, 90, 30));
+
+        btnvolta.setBackground(new java.awt.Color(252, 18, 76));
+        btnvolta.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        btnvolta.setForeground(new java.awt.Color(255, 255, 255));
+        btnvolta.setText("VOLTAR");
+        btnvolta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnvolta.setMaximumSize(new java.awt.Dimension(71, 22));
+        btnvolta.setMinimumSize(new java.awt.Dimension(71, 22));
+        btnvolta.setPreferredSize(new java.awt.Dimension(71, 22));
+        btnvolta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnvoltaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnvolta, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 860, 90, 30));
 
         CADASTRAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/5.png"))); // NOI18N
         getContentPane().add(CADASTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -174,11 +190,17 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         DoramaDAO objdoramadao = new DoramaDAO();   
         objdoramadao.cadastrarDorama(objdoramadto);
         
-        telaDorama objTelaDorama = new telaDorama();
-            objTelaDorama.setVisible(true);
+        telaLista objTelaLista = new telaLista();
+            objTelaLista.setVisible(true);
             dispose();
         
     }//GEN-LAST:event_btnadicionarActionPerformed
+
+    private void btnvoltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvoltaActionPerformed
+        telaAbertura objTelaAbertura = new telaAbertura();
+            objTelaAbertura.setVisible(true);
+            dispose();
+    }//GEN-LAST:event_btnvoltaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,6 +240,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CADASTRAR;
     private javax.swing.JButton btnadicionar;
+    private javax.swing.JButton btnvolta;
     private javax.swing.JTextField generoDorama;
     private javax.swing.JTextField nomeDorama;
     private javax.swing.JTextField txtepisodio;
