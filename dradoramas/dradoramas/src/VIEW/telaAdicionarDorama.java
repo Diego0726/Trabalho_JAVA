@@ -4,6 +4,9 @@
  */
 package VIEW;
 
+import DAO.DoramaDAO;
+import DTO.DoramaDTO;
+
 /**
  *
  * @author Pichau
@@ -26,35 +29,35 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        observacao = new javax.swing.JTextField();
-        episodio = new javax.swing.JTextField();
+        txtobservacao = new javax.swing.JTextField();
+        txtepisodio = new javax.swing.JTextField();
         nomeDorama = new javax.swing.JTextField();
-        plataforma = new javax.swing.JTextField();
-        temporada = new javax.swing.JTextField();
+        txtplataforma = new javax.swing.JTextField();
+        txttemporada = new javax.swing.JTextField();
         generoDorama = new javax.swing.JTextField();
-        adicionar = new javax.swing.JButton();
+        btnadicionar = new javax.swing.JButton();
         CADASTRAR = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        observacao.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        observacao.setBorder(null);
-        observacao.addActionListener(new java.awt.event.ActionListener() {
+        txtobservacao.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtobservacao.setBorder(null);
+        txtobservacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                observacaoActionPerformed(evt);
+                txtobservacaoActionPerformed(evt);
             }
         });
-        getContentPane().add(observacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 730, 330, 100));
+        getContentPane().add(txtobservacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 730, 330, 100));
 
-        episodio.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        episodio.setBorder(null);
-        episodio.addActionListener(new java.awt.event.ActionListener() {
+        txtepisodio.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtepisodio.setBorder(null);
+        txtepisodio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                episodioActionPerformed(evt);
+                txtepisodioActionPerformed(evt);
             }
         });
-        getContentPane().add(episodio, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 620, 150, 20));
+        getContentPane().add(txtepisodio, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 620, 150, 20));
 
         nomeDorama.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         nomeDorama.setBorder(null);
@@ -65,23 +68,23 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         });
         getContentPane().add(nomeDorama, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 330, 20));
 
-        plataforma.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        plataforma.setBorder(null);
-        plataforma.addActionListener(new java.awt.event.ActionListener() {
+        txtplataforma.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txtplataforma.setBorder(null);
+        txtplataforma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                plataformaActionPerformed(evt);
+                txtplataformaActionPerformed(evt);
             }
         });
-        getContentPane().add(plataforma, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 150, 30));
+        getContentPane().add(txtplataforma, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 150, 30));
 
-        temporada.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        temporada.setBorder(null);
-        temporada.addActionListener(new java.awt.event.ActionListener() {
+        txttemporada.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        txttemporada.setBorder(null);
+        txttemporada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                temporadaActionPerformed(evt);
+                txttemporadaActionPerformed(evt);
             }
         });
-        getContentPane().add(temporada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, 150, 20));
+        getContentPane().add(txttemporada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, 150, 20));
 
         generoDorama.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         generoDorama.setBorder(null);
@@ -92,20 +95,20 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         });
         getContentPane().add(generoDorama, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, 140, 30));
 
-        adicionar.setBackground(new java.awt.Color(252, 18, 76));
-        adicionar.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
-        adicionar.setForeground(new java.awt.Color(255, 255, 255));
-        adicionar.setText("ADICIONAR");
-        adicionar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        adicionar.setMaximumSize(new java.awt.Dimension(71, 22));
-        adicionar.setMinimumSize(new java.awt.Dimension(71, 22));
-        adicionar.setPreferredSize(new java.awt.Dimension(71, 22));
-        adicionar.addActionListener(new java.awt.event.ActionListener() {
+        btnadicionar.setBackground(new java.awt.Color(252, 18, 76));
+        btnadicionar.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        btnadicionar.setForeground(new java.awt.Color(255, 255, 255));
+        btnadicionar.setText("ADICIONAR");
+        btnadicionar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnadicionar.setMaximumSize(new java.awt.Dimension(71, 22));
+        btnadicionar.setMinimumSize(new java.awt.Dimension(71, 22));
+        btnadicionar.setPreferredSize(new java.awt.Dimension(71, 22));
+        btnadicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarActionPerformed(evt);
+                btnadicionarActionPerformed(evt);
             }
         });
-        getContentPane().add(adicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 860, 90, 30));
+        getContentPane().add(btnadicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 860, 90, 30));
 
         CADASTRAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/image/dra. doramas app/5.png"))); // NOI18N
         getContentPane().add(CADASTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -117,29 +120,53 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeDoramaActionPerformed
 
-    private void episodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_episodioActionPerformed
+    private void txtepisodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtepisodioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_episodioActionPerformed
+    }//GEN-LAST:event_txtepisodioActionPerformed
 
-    private void plataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plataformaActionPerformed
+    private void txtplataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtplataformaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_plataformaActionPerformed
+    }//GEN-LAST:event_txtplataformaActionPerformed
 
-    private void temporadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_temporadaActionPerformed
+    private void txttemporadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttemporadaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_temporadaActionPerformed
+    }//GEN-LAST:event_txttemporadaActionPerformed
 
-    private void observacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_observacaoActionPerformed
+    private void txtobservacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtobservacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_observacaoActionPerformed
+    }//GEN-LAST:event_txtobservacaoActionPerformed
 
     private void generoDoramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoDoramaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_generoDoramaActionPerformed
 
-    private void adicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarActionPerformed
+    private void btnadicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadicionarActionPerformed
+        String plataforma, nome, genero, temp, eps, observacao;
         
-    }//GEN-LAST:event_adicionarActionPerformed
+        plataforma = txtplataforma.getText();
+        nome = nomeDorama.getText();
+        genero = generoDorama.getText();
+        temp = txttemporada.getText();
+        eps = txtepisodio.getText();
+        observacao = txtobservacao.getText();
+        
+        DoramaDTO objDoramadto = new DoramaDTO();
+            objDoramadto.setplataforma(plataforma);
+            objDoramadto.setnome(nome);
+            objDoramadto.setgenero(genero);
+            objDoramadto.settemp(temp);
+            objDoramadto.seteps(eps);
+            objDoramadto.setobservacao(observacao);
+            
+        DoramaDAO objdoramadao = new DoramaDAO();   
+        objdoramadao.cadastrarDorama(objDoramadto);
+        
+        telaDorama objTelaDorama = new telaDorama();
+            objTelaDorama.setVisible(true);
+            dispose();
+        
+        
+    }//GEN-LAST:event_btnadicionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,12 +205,12 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CADASTRAR;
-    private javax.swing.JButton adicionar;
-    private javax.swing.JTextField episodio;
+    private javax.swing.JButton btnadicionar;
     private javax.swing.JTextField generoDorama;
     private javax.swing.JTextField nomeDorama;
-    private javax.swing.JTextField observacao;
-    private javax.swing.JTextField plataforma;
-    private javax.swing.JTextField temporada;
+    private javax.swing.JTextField txtepisodio;
+    private javax.swing.JTextField txtobservacao;
+    private javax.swing.JTextField txtplataforma;
+    private javax.swing.JTextField txttemporada;
     // End of variables declaration//GEN-END:variables
 }
