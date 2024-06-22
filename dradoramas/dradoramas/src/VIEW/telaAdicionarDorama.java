@@ -158,8 +158,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
             objdoramadto.setTemp(temp);
             objdoramadto.setEps(eps);
             objdoramadto.setObservacao(observacao);
-            objdoramadto.getID();
-            
+               
         DoramaDAO objdoramadao = new DoramaDAO();   
         objdoramadao.cadastrarDorama(objdoramadto);
         
