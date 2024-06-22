@@ -9,65 +9,72 @@ public class DoramaDTO {
     private String temp;
     private String eps;
     private String observacao;
-    public String get;
-   
-    //GET
+    private UsuarioDTO usuario; 
+
+    // GETTERS
     public int getID() {
         return ID;
     }
-    
-    public String getplataforma() {
+
+    public String getPlataforma() {
         return plataforma;
     }
 
-    public String getnome() {
+    public String getNome() {
         return nome;
     }
 
-    public String getgenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public String gettemp() {
+    public String getTemp() {
         return temp;
     }
 
-    public String geteps() {
+    public String getEps() {
         return eps;
     }
 
-    public String getobservacao() {
+    public String getObservacao() {
         return observacao;
     }
 
-    
-    //SET
+    public UsuarioDTO getUsuario() {
+        return usuario;
+    }
+
+    // SETTERS
     public void setID(int ID) {
         this.ID = ID;
     }
-   
-    public void setplataforma(String plataforma) {
+
+    public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
     }
 
-    public void setnome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setgenero(String genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    public void settemp (String temp) {
+    public void setTemp(String temp) {
         this.temp = temp;
     }
 
-    public void seteps(String eps) {
+    public void setEps(String eps) {
         this.eps = eps;
     }
 
-    public void setobservacao(String observacao) {
+    public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public void setUsuario(UsuarioDTO usuario) {
+        this.usuario = usuario;
     }
 
     @Override
@@ -91,12 +98,4 @@ public class DoramaDTO {
         final DoramaDTO other = (DoramaDTO) obj;
         return this.ID == other.ID;
     }
-
-    
-    
-    
-
-    
-    
-    
 }

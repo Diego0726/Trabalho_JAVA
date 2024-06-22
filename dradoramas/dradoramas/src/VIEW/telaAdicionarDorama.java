@@ -6,6 +6,7 @@ package VIEW;
 
 import DAO.DoramaDAO;
 import DTO.DoramaDTO;
+import DTO.UsuarioDTO;
 
 /**
  *
@@ -143,7 +144,6 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     private void btnadicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadicionarActionPerformed
         String plataforma, nome, genero, temp, eps, observacao;
         
-        
         plataforma = txtplataforma.getText();
         nome = nomeDorama.getText();
         genero = generoDorama.getText();
@@ -151,15 +151,14 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         eps = txtepisodio.getText();
         observacao = txtobservacao.getText();
         
-        
         DoramaDTO objdoramadto = new DoramaDTO();
-            objdoramadto.setplataforma(plataforma);
-            objdoramadto.setnome(nome);
-            objdoramadto.setgenero(genero);
-            objdoramadto.settemp(temp);
-            objdoramadto.seteps(eps);
-            objdoramadto.setobservacao(observacao);
-            
+            objdoramadto.setPlataforma(plataforma);
+            objdoramadto.setNome(nome);
+            objdoramadto.setGenero(genero);
+            objdoramadto.setTemp(temp);
+            objdoramadto.setEps(eps);
+            objdoramadto.setObservacao(observacao);
+            objdoramadto.getID();
             
         DoramaDAO objdoramadao = new DoramaDAO();   
         objdoramadao.cadastrarDorama(objdoramadto);
@@ -167,7 +166,6 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         telaDorama objTelaDorama = new telaDorama();
             objTelaDorama.setVisible(true);
             dispose();
-        
         
     }//GEN-LAST:event_btnadicionarActionPerformed
 
@@ -216,4 +214,5 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     private javax.swing.JTextField txtplataforma;
     private javax.swing.JTextField txttemporada;
     // End of variables declaration//GEN-END:variables
+
 }
