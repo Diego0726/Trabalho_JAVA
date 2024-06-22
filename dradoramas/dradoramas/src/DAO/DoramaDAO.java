@@ -38,31 +38,45 @@ public class DoramaDAO {
         }
     }
 
-    public ArrayList<DoramaDTO> pesquisarDorama() {
-        String sql = "select plataforma as Plataforma, nome as Nome, genero as Gênero, temp as Temporada, eps as Episódio, observacao as Observação from doramas;";
-        conn = new ConexaoDAO().conectaBD();
-        
-        try {
-            pstm = conn.prepareStatement(sql);
-            rs = pstm.executeQuery();
+   public ArrayList<DoramaDTO> pesquisarDorama(String Usuario_email) {
+    String sql = "SELECT * FROM doramas WHERE usuario_email = ?";
+    conn = new ConexaoDAO().conectaBD();
+    ArrayList<DoramaDTO> lista = new ArrayList<>();
 
-            while (rs.next()) {
-                DoramaDTO objdoramadto = new DoramaDTO();
-                objdoramadto.setPlataforma(rs.getString("plataforma"));
-                objdoramadto.setNome(rs.getString("nome"));
-                objdoramadto.setGenero(rs.getString("genero"));
-                objdoramadto.setTemp(rs.getString("temp"));
-                objdoramadto.setEps(rs.getString("eps"));
-                objdoramadto.setObservacao(rs.getString("observacao"));
-                
+    try {
+        pstm = conn.prepareStatement(sql);
+        pstm.setString(1, Usuario_email); // Define o valor do parâmetro
 
-                lista.add(objdoramadto);
-            }
+        rs = pstm.executeQuery();
 
-        } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "DoramaDAO: pesquisarDorama" + erro);
+        while (rs.next()) {
+            DoramaDTO objdoramadto = new DoramaDTO();
+            objdoramadto.setPlataforma(rs.getString("plataforma"));
+            objdoramadto.setNome(rs.getString("nome"));
+            objdoramadto.setGenero(rs.getString("genero"));
+            objdoramadto.setTemp(rs.getString("temp"));
+            objdoramadto.setEps(rs.getString("eps"));
+            objdoramadto.setObservacao(rs.getString("observacao"));
+
+            lista.add(objdoramadto);
         }
 
-        return lista;
+    } catch (SQLException erro) {
+        JOptionPane.showMessageDialog(null, "DoramaDAO: pesquisarDorama" + erro);
+    } finally {
+        // Fechando os recursos no bloco finally
+        try {
+            if (rs != null) rs.close();
+            if (pstm != null) pstm.close();
+            if (conn != null) conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
+    return lista;
 }
+
+}
+
+        

@@ -6,6 +6,7 @@ package VIEW;
 
 import DAO.DoramaDAO;
 import DTO.DoramaDTO;
+import DTO.Sessao;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -82,9 +83,8 @@ public class telaLista extends javax.swing.JFrame {
         jScrollPane1.setToolTipText("");
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        tabelaDorama.setBackground(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setBackground(new java.awt.Color(252, 149, 165));
         tabelaDorama.setFont(new java.awt.Font("Bahnschrift", 1, 12)); // NOI18N
-        tabelaDorama.setForeground(new java.awt.Color(255, 255, 255));
         tabelaDorama.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -106,10 +106,13 @@ public class telaLista extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabelaDorama.setToolTipText("");
         tabelaDorama.setFocusable(false);
-        tabelaDorama.setGridColor(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setGridColor(new java.awt.Color(255, 255, 255));
+        tabelaDorama.setOpaque(false);
         tabelaDorama.setPreferredSize(new java.awt.Dimension(430, 80));
-        tabelaDorama.setSelectionBackground(new java.awt.Color(252, 18, 76));
+        tabelaDorama.setRequestFocusEnabled(false);
+        tabelaDorama.setSelectionBackground(new java.awt.Color(0, 0, 0));
         tabelaDorama.setSelectionForeground(new java.awt.Color(255, 255, 255));
         tabelaDorama.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabelaDorama);
@@ -187,8 +190,10 @@ public class telaLista extends javax.swing.JFrame {
 
             DefaultTableModel model = (DefaultTableModel) tabelaDorama.getModel();
             model.setNumRows(0);
-
-            ArrayList<DoramaDTO> lista = objdoramadao.pesquisarDorama();
+            
+            String Usuario_email = Sessao.getUsuario_email();
+                      
+                  ArrayList<DoramaDTO> lista = objdoramadao.pesquisarDorama(Usuario_email);
 
             for (int num = 0; num < lista.size(); num++) {
                 model.addRow(new Object[]{
