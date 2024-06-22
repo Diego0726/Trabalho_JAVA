@@ -143,6 +143,7 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
     private void btnadicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadicionarActionPerformed
         String plataforma, nome, genero, temp, eps, observacao;
         
+        
         plataforma = txtplataforma.getText();
         nome = nomeDorama.getText();
         genero = generoDorama.getText();
@@ -150,16 +151,18 @@ public class telaAdicionarDorama extends javax.swing.JFrame {
         eps = txtepisodio.getText();
         observacao = txtobservacao.getText();
         
-        DoramaDTO objDoramadto = new DoramaDTO();
-            objDoramadto.setplataforma(plataforma);
-            objDoramadto.setnome(nome);
-            objDoramadto.setgenero(genero);
-            objDoramadto.settemp(temp);
-            objDoramadto.seteps(eps);
-            objDoramadto.setobservacao(observacao);
+        
+        DoramaDTO objdoramadto = new DoramaDTO();
+            objdoramadto.setplataforma(plataforma);
+            objdoramadto.setnome(nome);
+            objdoramadto.setgenero(genero);
+            objdoramadto.settemp(temp);
+            objdoramadto.seteps(eps);
+            objdoramadto.setobservacao(observacao);
+            
             
         DoramaDAO objdoramadao = new DoramaDAO();   
-        objdoramadao.cadastrarDorama(objDoramadto);
+        objdoramadao.cadastrarDorama(objdoramadto);
         
         telaDorama objTelaDorama = new telaDorama();
             objTelaDorama.setVisible(true);

@@ -10,13 +10,12 @@ public class DoramaDTO {
     private String eps;
     private String observacao;
     public String get;
-
-    
+   
     //GET
     public int getID() {
         return ID;
     }
-
+    
     public String getplataforma() {
         return plataforma;
     }
@@ -46,7 +45,7 @@ public class DoramaDTO {
     public void setID(int ID) {
         this.ID = ID;
     }
-
+   
     public void setplataforma(String plataforma) {
         this.plataforma = plataforma;
     }

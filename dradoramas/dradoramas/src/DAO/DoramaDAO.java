@@ -14,19 +14,20 @@ public class DoramaDAO {
     PreparedStatement pstm;
     
 
-    public void cadastrarDorama(DoramaDTO objDoramadto) {
-        String sql = "insert into usuario (plataforma, nome, genero, temp, eps, observacao) values (?,?,?,?,?,?)";
+    public void cadastrarDorama(DoramaDTO objdoramadto) {
+        String sql = "insert into doramas (plataforma, nome, genero, temp, eps, observacao) values (?,?,?,?,?,?)";
 
         conn = new ConexaoDAO().conectaBD();
           
         try {
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1, objDoramadto.getplataforma());
-            pstm.setString(2, objDoramadto.getnome());
-            pstm.setString(3, objDoramadto.getgenero());
-            pstm.setString(4, objDoramadto.gettemp());
-            pstm.setString(5, objDoramadto.geteps());
-            pstm.setString(6, objDoramadto.getobservacao());
+            pstm.setString(1, objdoramadto.getplataforma());
+            pstm.setString(2, objdoramadto.getnome());
+            pstm.setString(3, objdoramadto.getgenero());
+            pstm.setString(4, objdoramadto.gettemp());
+            pstm.setString(5, objdoramadto.geteps());
+            pstm.setString(6, objdoramadto.getobservacao());
+            
             
             pstm.execute();
             pstm.close();
